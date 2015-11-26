@@ -1,6 +1,3 @@
-if __name__ != "__main__":
-    return
-
 import telebot
 
 bot = telebot.TeleBot('128376654:AAEOiL_whbfpLhc2_t2s6NoQGnW6141YqNU')
@@ -25,4 +22,5 @@ def compile_link(message):
     bot.reply_to(message, "Compiling...")
 
 
+if __name__ == "__main__":
     bot.polling()
