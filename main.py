@@ -1,3 +1,6 @@
+if __name__ != "__main__":
+    return
+
 import telebot
 
 bot = telebot.TeleBot('128376654:AAEOiL_whbfpLhc2_t2s6NoQGnW6141YqNU')
@@ -12,6 +15,14 @@ def welcome(message):
 
     bot.reply_to(message, welcome_string)
 
-if __name__ == "__main__":
+@bot.message_handler(commands=['compile'])
+def compile_link(message):
+    arguments = message.text.split(" ")
+    if len(arguments) < 3:
+        bot.reply_to(message, "Not enough arguments :c")
+        return
+    arguments = arguments[1:]
+    bot.reply_to(message, "Compiling...")
+
 
     bot.polling()
