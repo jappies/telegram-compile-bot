@@ -1,0 +1,16 @@
+name,id,html
+C#,10,text/x-csharp
+C,7,text/x-c++src
+Clojure,2,text/x-clojure
+Java,8,text/x-java
+Go,6,text/x-go
+PlainJavaScript,4,text/javascript
+PHP,3,text/x-php
+Python,0,text/x-python
+Ruby,1,text/x-ruby
+Scala,9,text/x-scala
+VB.NET,11, text/x-vb
+Bash,11, text/x-bash
+Objective-C,12,text/x-objectivec
+MySQL,13,text/x-sql
+Perl,14,text/x-perl
