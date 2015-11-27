@@ -7,7 +7,7 @@ bot = telebot.TeleBot('128376654:AAEOiL_whbfpLhc2_t2s6NoQGnW6141YqNU')
 @bot.message_handler(commands=['start', 'help'])
 def welcome(message):
     welcome_string = """This bot can compile code given to it, using pastebin
-    urls. Just use /compile <language> <pastebin_id>
+    urls. Just use /compile <pastebin_id> <language>
     to start! Use /languages to print a list
     of all supported languages in a table!
     Happy compiling ^^"""
@@ -29,7 +29,7 @@ def compile_link(message):
     id = -1
 
     for row in input_file:
-        if row["name"] == arguments[1]:
+        if row["name"].lower() == arguments[1].lower():
             id = row["id"]
 
     if id is -1:
@@ -40,7 +40,6 @@ def compile_link(message):
     if code.status_code != 200 or "Page Is Removed" in code:
         bot.reply_to(message, "Error while getting code")
         return;
-    print "test"
 
     args = {}
     args["language"] = id
@@ -51,7 +50,6 @@ def compile_link(message):
 
     output = r.json()
 
-    print output
     response = "Output: \n"
     if output["errors"]:
         response += "An error occured: \n"
@@ -70,7 +68,7 @@ def print_languages(message):
     input_file = csv.DictReader(open("languages.csv"))
     response = "Supported languages:\n"
     for row in input_file:
-        response += row["name"]
+        response += row["name"].lower()
         response += "\n"
 
     bot.reply_to(message,response)
