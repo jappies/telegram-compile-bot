@@ -1,4 +1,9 @@
 argparse==1.2.1
 future==0.15.2
-python-telegram-bot==2.9.2
+py==1.4.30
+pyTelegramBotAPI==1.4.0
+pytest==2.8.3
+requests==2.8.1
+six==1.10.0
+suds==0.4
 wsgiref==0.1.2
