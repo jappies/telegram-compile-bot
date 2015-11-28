@@ -45,13 +45,19 @@ def compile_link(message):
     args["language"] = id
     args["code"] = code
     args["stdin"] = "#banmartijn"
-    r = requests.post("http://carlosvanrooijen.nl:8082/compile", data = args,
+    try:
+        r = requests.post("http://carlosvanrooijen.nl:8082/compile", data = args,
                         timeout=10)
+    except requests.exceptions.Timeout:
+        bot.reply_to(message, "Error: timeout while executing")
+        return
+
+
 
     output = r.json()
 
     response = "Output: \n"
-    if output["errors"]:
+    if "errors" in output and output["errors"]:
         response += "An error occured: \n"
         response += output["errors"]
         bot.reply_to(message, response)
