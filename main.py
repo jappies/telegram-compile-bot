@@ -2,7 +2,11 @@ import telebot
 import requests
 import csv
 
-bot = telebot.TeleBot('128376654:AAEOiL_whbfpLhc2_t2s6NoQGnW6141YqNU')
+token = ""
+
+with open('token.txt') as token_file:
+    token = token_file.read()
+bot = telebot.TeleBot(token.strip())
 
 @bot.message_handler(commands=['start', 'help'])
 def welcome(message):
