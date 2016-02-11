@@ -2,7 +2,10 @@ import telebot
 import requests
 import csv
 
+
 token = ""
+
+HOST = ""
 
 with open('token.txt') as token_file:
     token = token_file.read()
@@ -50,7 +53,7 @@ def compile_link(message):
     args["code"] = code
     args["stdin"] = "#banmartijn"
     try:
-        r = requests.post("http://carlosvanrooijen.nl:8082/compile", data = args,
+        r = requests.post(HOST, data = args,
                         timeout=10)
     except requests.exceptions.Timeout:
         bot.reply_to(message, "Error: timeout while executing")
