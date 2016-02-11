@@ -6,11 +6,20 @@ Telegram-bot-compiler is, as the name suggests, a telegram bot that compiles and
 Usage
 -----
 
-Run the compilebox, supplied as a git submodule:
+Clone the repository by executing the following command:
 
 ```
-nodejs app.js
+git clone --recursive https://github.com/flammified/telegram-compile-bot.git
 ```
+
+Then run the compilebox, supplied as a git submodule:
+
+```
+nodejs compilebox/app.js
+```
+
+You can edit settings inside app.js as well. If you want to read more about that project, click on [this](https://github.com/remoteinterview/compilebox/)  link. It is not my project :)
+
 
 Then put your telegram http token in file called token.txt and edit the host in the code. Afterwards run:
 
