@@ -12,7 +12,7 @@ Run the compilebox, supplied as a git submodule:
 nodejs app.js
 ```
 
-Then put your telegram http token in file called token.txt and do:
+Then put your telegram http token in file called token.txt and edit the host in the code. Afterwards run:
 
 ```
 python main.py
