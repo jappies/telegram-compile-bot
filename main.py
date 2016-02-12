@@ -3,6 +3,10 @@ import requests
 import csv
 
 
+token = ""
+
+HOST = ""
+
 with open('token.txt') as token_file:
     token = token_file.read()
 bot = telebot.TeleBot(token.strip())
@@ -50,6 +54,7 @@ def compile_link(message):
     args["LanguageChoiceWrapper"] = id #"Python"#id
     args["Program"] = code
     args["CompilerArgs"] = compargs
+
     try:
         r = requests.post(HOST, data = args,
                         timeout=10)
