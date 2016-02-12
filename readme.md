@@ -9,7 +9,7 @@ Usage
 Clone the repository by executing the following command:
 
 ```
-git clone --recursive https://github.com/flammified/telegram-compile-bot.git
+git clone  https://github.com/flammified/telegram-compile-bot.git
 ```
 
 
