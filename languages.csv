@@ -1,0 +1,32 @@
+id,name,compileargs
+1,C#
+7,C++-gcc,-Wall -std=c++14 -O2 -o a.out source_file.cpp
+27,C++-clang,-Wall -std=c++14 -O2 -o a.out source_file.cpp
+28,C++-vc++,source_file.cpp -o a.exe /EHsc /MD /I C:\boost_1_59_0 /link /LIBPATH:C:\boost_1_59_0\stage\lib
+6,C-gcc,-Wall -std=gnu99 -O2 -o a.out source_file.c
+26,C-clang,-Wall -std=gnu99 -O2 -o a.out source_file.c
+29,C-vc,source_file.c -o a.exe
+18,Common-Lisp
+30,D,source_file.d -ofa.out
+3,F#
+20,Go,-o a.out source_file.go
+11,Haskell,-o a.out source_file.hs
+4,Java
+17,Javascript
+14,Lua
+23,Node.js
+25,Octave
+10,Objective-C,-MMD -MP -DGNUSTEP -DGNUSTEP_BASE_LIBRARY=1 -DGNU_GUI_LIBRARY=1 -DGNU_RUNTIME=1 -DGNUSTEP_BASE_LIBRARY=1 -fno-strict-aliasing -fexceptions -fobjc-exceptions -D_NATIVE_OBJC_EXCEPTIONS -pthread -fPIC -Wall -DGSWARN -DGSDIAGNOSE -Wno-import -g -O2 -fgnu-runtime -fconstant-string-class=NSConstantString -I. -I /usr/include/GNUstep -I/usr/include/GNUstep -o a.out source_file.m -lobjc -lgnustep-base
+9,Pascal
+13,Perl
+8,Php
+19,Prolog
+5,Python
+24,Python-3
+31,R
+12,Ruby
+21,Scala
+22,Scheme
+16,Sql-Server
+32,Tcl
+2,Visual-Basic
